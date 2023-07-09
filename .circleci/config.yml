@@ -3,7 +3,7 @@ orbs:
   python: circleci/python@2.0.3
 jobs:
   build: # tên jobs
-    executor: python/default # primary container for Python v3.11.4. You can now use Python within the steps for this job.
+    executor: python/default # using executor default of orbs
     steps:
       - checkout
       - run: python --version
