@@ -1,0 +1,20 @@
+version: 2.1
+orbs:
+  python: circleci/python@2.0.3
+jobs:
+  build: # tên jobs
+    executor: python/default # primary container for Python v3.11.4. You can now use Python within the steps for this job.
+    steps:
+      - checkout
+      - run: python --version
+# jobs:
+#   build: # tên jobs
+#     docker: # executor docker
+#       - image: cimg/python:3.11.4 # primary container for Python v3.11.4. You can now use Python within the steps for this job.
+#     steps:
+#       - checkout
+#       - run: python --version
+workflows:
+  build: # tên workflows
+    jobs:
+      - build
